@@ -1,6 +1,11 @@
 import React , {useState} from "react";  
 import styled from 'styled-components';
-function Login({ onLogin }){
+import { useNavigate } from "react-router-dom";
+
+function Login({ onLogin }){  
+  const navigate = useNavigate();
+
+
     const [isSignUp, setIsSignUp] = useState(true);
     const [formData, setFormData] = useState({ email: "", password: "" });
     const handleChange = (e) => {
@@ -27,10 +32,14 @@ function Login({ onLogin }){
           <input placeholder="Password" className="input-field" type="password" />
         </div>
         <div className="btn">
-          <button className="button1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Login&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-          <button className="button2">Sign Up</button>
+          
+          <button className="button1" onClick={() => navigate("/dashboard")}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Login&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+          
+          
+          <button className="button2" onClick={() =>navigate("/signup")}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sign Up&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+          
         </div>
-        <button className="button3">Forgot Password</button>
+        <button className="button3" onClick={() =>navigate("/forgetpassword")}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Forgot Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
       </form>
     </StyledWrapper>
   );
@@ -41,7 +50,8 @@ const StyledWrapper = styled.div`
   justify-content: center;
   align-items: center;
   min-height: 100vh; /* Full height for vertical centering */
-  background-color: #121212; /* Optional: Dark background */
+      color: rgb(16,137,211);
+ /* Optional: Dark background */
 
   .form {
     display: flex;
@@ -49,10 +59,10 @@ const StyledWrapper = styled.div`
     gap: 10px;
     width: 300px; /* Reduce form width */
     padding: 1.5em;
-    background-color: #171717;
+    background-color:white;
     border-radius: 15px;
     transition: .3s ease-in-out;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add subtle shadow */
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 20px 10px -15px;
   }
 
   .form:hover {
@@ -61,9 +71,9 @@ const StyledWrapper = styled.div`
 
   #heading {
     text-align: center;
-    margin: 1em 0;
-    color: rgb(255, 255, 255);
-    font-size: 1.2em;
+    font-weight: 900;
+    font-size: 30px;
+    color: rgb(16, 137, 211);
   }
 
   .field {
@@ -72,21 +82,18 @@ const StyledWrapper = styled.div`
     gap: 0.5em;
     padding: 0.6em;
     border-radius: 10px;
-    background-color: #252525;
-  }
-
-  .input-icon {
-    height: 1.2em;
-    width: 1.2em;
-    fill: white;
+    background-color: rgb(16,137,211);
   }
 
   .input-field {
-    background: none;
+    width: 90%;
+    background: white;
     border: none;
-    outline: none;
-    flex-grow: 1;
-    color: #d3d3d3;
+    padding: 15px 20px;
+    border-radius: 20px;
+    margin-top: 15px;
+    box-shadow: #cff0ff 0px 10px 10px -5px;
+    border-inline: 2px solid transparent;
   }
 
   .form .btn {
@@ -99,7 +106,7 @@ const StyledWrapper = styled.div`
     padding: 0.5em;
     border-radius: 5px;
     border: none;
-    background-color: #252525;
+    background-color: rgb(16,137,211);
     color: white;
     transition: .3s ease-in-out;
   }
