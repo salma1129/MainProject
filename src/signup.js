@@ -33,7 +33,6 @@ const Signup = () => {
           </div>
         </div>
 
-        <span className="agreement"><a href="#">Learn user licence agreement</a></span>
       </div>
     </StyledWrapper>
   );
@@ -44,7 +43,7 @@ const StyledWrapper = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: black;
+  background-color:rgb(124, 125, 128);
   .container {
     max-width: 350px;
     background: #F8F9FD;
@@ -59,7 +58,7 @@ const StyledWrapper = styled.div`
     text-align: center;
     font-weight: 900;
     font-size: 30px;
-    color: rgb(16, 137, 211);
+    color:rgb(46, 74, 121);
   }
 
   .form {
@@ -83,7 +82,7 @@ const StyledWrapper = styled.div`
 
   .form .input:focus {
     outline: none;
-    border-inline: 2px solid #12B1D1;
+    border-inline: 2px solid rgb(170, 170, 170);
   }
 
   .form .forgot-password {
@@ -94,7 +93,7 @@ const StyledWrapper = styled.div`
 
   .form .forgot-password a {
     font-size: 11px;
-    color: #0099ff;
+    color: rgb(46, 74, 121);
     text-decoration: none;
   }
 
@@ -102,7 +101,7 @@ const StyledWrapper = styled.div`
     display: block;
     width: 100%;
     font-weight: bold;
-    background: linear-gradient(45deg, rgb(16, 137, 211) 0%, rgb(18, 177, 209) 100%);
+    background: linear-gradient(45deg, rgb(46, 74, 121) 0%, rgb(46, 74, 121) 100%);
     color: white;
     padding-block: 15px;
     margin: 20px auto;
@@ -129,7 +128,7 @@ const StyledWrapper = styled.div`
   .social-account-container .title {
     display: block;
     text-align: center;
-    font-size: 10px;
+    font-size: 20px;
     color: rgb(170, 170, 170);
   }
 
@@ -175,7 +174,7 @@ const StyledWrapper = styled.div`
 
   .agreement a {
     text-decoration: none;
-    color: #0099ff;
+    color: rgb(46, 74, 121);
     font-size: 9px;
   }`;
 

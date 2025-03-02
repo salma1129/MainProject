@@ -17,7 +17,6 @@ const Forgetpass = () => {
         </form>
         <p className="signup-link">
           Don't have an account?
-          <a href="#" className="signup-link link"> Sign up now</a>
         </p>
       </div>
     </StyledWrapper>
@@ -30,15 +29,15 @@ const StyledWrapper = styled.div`
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background-color: black;
+  background-color: rgb(124, 125, 128);
    .form-container {
     position: center;
-    max-width: 400px;
+    width: 450px;
     background-color: #fff;
     padding: 40px 40px;
     font-size: 20px;
     font-family: inherit;
-    color: rgb(16, 137, 211);
+    color: rgb(46, 74, 121);
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -87,33 +86,30 @@ const StyledWrapper = styled.div`
 
   .form-container .form-group input:focus {
     outline: none;
-    border-color: #1778f2;
+    border-color: rgb(46, 74, 121);
   }
 
   .form-container .form-submit-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: inherit;
-    color: #fff;
-    background-color:rgb(23, 131, 198);
-    border: none;
+    display: block;
     width: 100%;
-    padding: 12px 16px;
-    font-size: inherit;
-    gap: 8px;
-    margin: 12px 0;
-    cursor: pointer;
-    border-radius: 6px;
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
+    font-weight: bold;
+    background: linear-gradient(45deg, rgb(46, 74, 121) 0%, rgb(46, 74, 121) 100%);
+    color: white;
+    padding-block: 15px;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 20px 10px -15px;
+    border: none;
+    transition: all 0.2s ease-in-out;
   }
 
   .form-container .form-submit-btn:hover {
-    background-color: #313131;
+    transform: scale(1.03);
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 23px 10px -20px;
   }
 
   .form-container .link {
-    color: rgba(148, 39, 39, 0.78);
+    color: rgba(236, 44, 44, 0.78);
     text-decoration: none;
   }
 
@@ -123,7 +119,7 @@ const StyledWrapper = styled.div`
   }
 
   .form-container .signup-link .link {
-    font-weight: 400;
+    font-weight: 300;
   }
 
   .form-container .link:hover {
